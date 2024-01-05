@@ -1,7 +1,6 @@
 def insertion_sort(input: list[int]) -> list[int]:
     for i in range(1, len(input)):
         key = input[i]
-
         j = i - 1
         # Move elements from i - 1 to 0 one position to the right,
         # until we find the right place for the key to insert
