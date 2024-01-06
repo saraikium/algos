@@ -1,0 +1,15 @@
+[tool.pyright]
+include = ["src"]
+exclude = [
+    "**/__pycache__",
+]
+ignore = ["src/oldstuff"]
+defineConstant = { DEBUG = true }
+stubPath = "src/stubs"
+
+reportMissingImports = true
+reportMissingTypeStubs = false
+
+pythonVersion = "3.12.1"
+pythonPlatform = "Linux"
+
