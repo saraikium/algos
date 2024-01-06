@@ -1,4 +1,4 @@
-def find_triplets(arr, K):
+def find_triplets(arr: list[int], k: int):
     arr.sort()  # Sort the array
     triplets = []
     n = len(arr)
@@ -10,7 +10,7 @@ def find_triplets(arr, K):
         while left < right:
             current_sum = arr[i] + arr[left] + arr[right]
 
-            if current_sum == K:
+            if current_sum == k:
                 triplets.append((arr[i], arr[left], arr[right]))
                 while left < right and arr[left] == arr[left + 1]:  # Skip duplicates
                     left += 1
@@ -18,7 +18,7 @@ def find_triplets(arr, K):
                     right -= 1
                 left += 1
                 right -= 1
-            elif current_sum < K:
+            elif current_sum < k:
                 left += 1
             else:
                 right -= 1
